@@ -27,32 +27,32 @@ export default function Home() {
     }, [])
 
     return (
-        <Grid display="flex" flexDirection="column" alignItems="center" sx={{ mx: "50px" ,my:"15px"}}>
+        <Grid display="flex" flexDirection="column" alignItems="center" sx={{ mx: "50px", my: "15px" }}>
             <Typography variant="h5" component="div" sx={{ flexGrow: 1, my: "16px" }}>
                 <b>Users</b>
             </Typography>
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650}}>
+                <Table sx={{ minWidth: 650 }}>
                     <caption>
                         {data.length} users exists now
                     </caption>
-                    <TableHead>
+                    <TableHead >
                         <TableRow>
-                            <TableCell >
-                                <b>Name</b>
+                            <TableCell sx={{ fontSize: "medium", fontWeight: "bold" }}>
+                                Name
                                 <Button variant="text" fullWidth onClick={() => setData([...data].sort((a, b) => a.name.localeCompare(b.name)))} >
                                     <ExpandMoreIcon />
                                 </Button>
                             </TableCell>
-                            <TableCell >
-                                <b>Email</b>
+                            <TableCell sx={{ fontSize: "medium", fontWeight: "bold" }}>
+                                Email
                                 <Button fullWidth>
                                     <ExpandMoreIcon onClick={() => setData([...data].sort((a, b) => a.email.localeCompare(b.email)))} />
                                 </Button>
                             </TableCell>
-                            <TableCell sx={{textAlign:"top"}}>
+                            <TableCell sx={{ textAlign: "top", fontSize: "medium", fontWeight: "bold" }}>
                                 <b>Company name</b>
-                            <div style={{height:"5vh"}}></div></TableCell>
+                                <div style={{ height: "5vh" }}></div></TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

@@ -51,7 +51,8 @@ export default function UserPosts() {
                                     {p.body}
                                 </React.Fragment>
                             } />
-                    </ListItem>)}
+                    </ListItem>
+                )}
             </List>
         </Grid>
     )
