@@ -46,8 +46,8 @@ export default function Home() {
                             </TableCell>
                             <TableCell sx={{ fontSize: "medium", fontWeight: "bold" }}>
                                 Email
-                                <Button fullWidth>
-                                    <ExpandMoreIcon onClick={() => setData([...data].sort((a, b) => a.email.localeCompare(b.email)))} />
+                                <Button fullWidth onClick={() => setData([...data].sort((a, b) => a.email.localeCompare(b.email)))}>
+                                    <ExpandMoreIcon />
                                 </Button>
                             </TableCell>
                             <TableCell sx={{ textAlign: "top", fontSize: "medium", fontWeight: "bold" }}>
